@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.border-frame {
+  /* Use the border image properties exactly as needed */
+  border-image: url("https://or-temple-st.dinamalar.com/new2024/temple-white/frame1.png") 93 92 87 92 stretch;
+  /* Note: frame1.png must be placed in your public/images directory */
+
+  border-color: #f4cb52;
+  border-style: inset;
+  border-width: 34px;
+}
