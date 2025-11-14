@@ -39,7 +39,6 @@ export default function TemplePage() {
   const map = templeData.newslist?.map;
   // const gallery = templeData.newslist?.gallery;
   const gallery = templeData.newslist?.gallery || { items: [] };
-  console.log("✅ Gallery loaded:", gallery.items?.length);
   const temples = templeData.newslist?.temples;
 
   return (
@@ -467,7 +466,6 @@ export default function TemplePage() {
 
                 </div>
 
-
                 {/* Details Sections */}
                 {details.details?.map((d: any, i: number) => (
                   <div key={i} className="mb-5">
@@ -491,13 +489,15 @@ export default function TemplePage() {
               <div>
 
                 <div className="flex items-center justify-center gap-1 mb-2">
-                  <svg className="mb-1 mr-1" stroke="currentColor"
-                    fill="#ff4500" strokeWidth="0" viewBox="0 0 24 24"
-                    height="18px" width="18px" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      d="M6.6 11h10.8l-.9-3h-9zM20 11v2H4v-2H2v11h8v-5h4v5h8V11zM15.9 6 15 3V1h-2v2h-2.03V1h-2v2.12L8.1 6z">
-                    </path>
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_62_97)">
+                      <path d="M6.0001 6.66675C5.63191 6.66675 5.33343 6.96521 5.33343 7.33341V10.0001H6.66678V8.00008H8.66678V9.66675L11.0001 7.33341L8.66678 5.00007V6.66675H6.0001ZM8.47151 0.928999L15.0712 7.52868C15.3315 7.78901 15.3315 8.21115 15.0712 8.47148L8.47151 15.0711C8.21118 15.3315 7.78904 15.3315 7.52871 15.0711L0.92903 8.47148C0.668676 8.21115 0.668676 7.78901 0.92903 7.52868L7.52871 0.928999C7.78904 0.668646 8.21118 0.668646 8.47151 0.928999Z" fill="#FF4500" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_62_97">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
                   </svg>
                   <p className="text-black font-semibold text-lg">{transport.tabname}</p>
                 </div>
@@ -529,21 +529,25 @@ export default function TemplePage() {
               map?.lat ? (
                 <div>
                   <div className="flex items-center justify-center gap-1 mb-2">
-                    <svg className="mb-1 mr-1" stroke="currentColor"
-                      fill="#ff4500" strokeWidth="0" viewBox="0 0 24 24"
-                      height="18px" width="18px" xmlns="http://www.w3.org/2000/svg">
-                      <path fill="none" d="M0 0h24v24H0z"></path>
-                      <path
-                        d="M6.6 11h10.8l-.9-3h-9zM20 11v2H4v-2H2v11h8v-5h4v5h8V11zM15.9 6 15 3V1h-2v2h-2.03V1h-2v2.12L8.1 6z">
-                      </path>
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_63_99)">
+                        <path d="M11.2667 4.4007C11.2667 5.88703 9.27676 8.53576 8.40292 9.62737C8.19331 9.8887 7.80403 9.8887 7.59715 9.62737C6.72331 8.53576 4.73337 5.88703 4.73337 4.4007C4.73337 2.59587 6.1952 1.13403 8.00003 1.13403C9.80487 1.13403 11.2667 2.59587 11.2667 4.4007ZM11.4845 6.58937C11.5798 6.40153 11.6669 6.2137 11.7458 6.02859C11.7594 5.99592 11.773 5.96053 11.7866 5.92787L14.9444 4.66476C15.3745 4.49326 15.84 4.80903 15.84 5.27181V12.6436C15.84 12.9104 15.6767 13.1499 15.429 13.2506L11.4845 14.8268V6.58937ZM3.90581 4.89887C3.97115 5.2827 4.10181 5.66926 4.25426 6.02859C4.3332 6.2137 4.42031 6.40153 4.51559 6.58937V13.433L1.05565 14.8186C0.625534 14.9901 0.160034 14.6744 0.160034 14.2116V6.83981C0.160034 6.57303 0.323367 6.33348 0.57109 6.23276L3.90853 4.89887H3.90581ZM9.08348 10.1718C9.46187 9.69814 10.0553 8.92776 10.6134 8.0757V14.8622L5.3867 13.3677V8.0757C5.94476 8.92776 6.5382 9.69814 6.91659 10.1718C7.47465 10.8687 8.52542 10.8687 9.08348 10.1718ZM8.00003 5.27181C8.83826 5.27181 9.36215 4.36441 8.94304 3.63848C8.74853 3.30158 8.38906 3.09403 8.00003 3.09403C7.16181 3.09403 6.63791 4.00144 7.05703 4.72737C7.25154 5.06427 7.61101 5.27181 8.00003 5.27181Z" fill="#FF4500" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_63_99">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
                     </svg>
+
                     <p className="text-black font-semibold text-lg">கூகுள் {map.tabname}</p>
                   </div>
 
                   <Image src="/belowBorder.png" alt="Border" className="mx-auto my-3" width={200} height={15} loading="lazy" />
+
                   <iframe
                     src={`https://www.google.com/maps?q=${map.lat},${map.lng}&z=${map.zoom || 12}&output=embed`}
-                    className="w-full h-80 rounded-xl border-0"
+                    className="w-full h-80 rounded-xl border-0" loading="lazy"
                     allowFullScreen
                   ></iframe>
                 </div>
@@ -552,40 +556,45 @@ export default function TemplePage() {
               )
             )}
 
-            {/* படங்கள் */}
-            {activeTab === 'படங்கள்' && (
-
+            {/* 🖼️ படங்கள் (Gallery Tab) - FIXED */}
+            {activeTab === 'படங்கள்' && gallery && (
               <div>
+
                 <div className="flex items-center justify-center gap-1 mb-2">
-                  <svg className="mb-1 mr-1" stroke="currentColor"
-                    fill="#ff4500" strokeWidth="0" viewBox="0 0 24 24"
-                    height="18px" width="18px" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      d="M6.6 11h10.8l-.9-3h-9zM20 11v2H4v-2H2v11h8v-5h4v5h8V11zM15.9 6 15 3V1h-2v2h-2.03V1h-2v2.12L8.1 6z">
-                    </path>
+                  <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_63_101)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25688 1.1541C4.34487 0.994714 4.51254 0.895752 4.6946 0.895752H9.30539C9.48745 0.895752 9.65513 0.994714 9.74312 1.1541L10.7583 2.99309L11.1016 3.02267L11.1678 3.02839C12.3537 3.13081 13.3292 4.04237 13.5033 5.22276C13.6307 6.08618 13.75 7.00305 13.75 7.94716C13.75 8.89127 13.6307 9.80814 13.5033 10.6716C13.3292 11.852 12.3537 12.7635 11.1678 12.8659C9.79898 12.9842 8.40355 13.1044 7 13.1044C5.59645 13.1044 4.20102 12.9842 2.83217 12.8659C1.64631 12.7635 0.670832 11.852 0.496668 10.6716C0.369272 9.80814 0.25 8.89127 0.25 7.94716C0.25 7.00305 0.369272 6.08618 0.496668 5.22276C0.670832 4.04236 1.64631 3.1308 2.83217 3.02839L2.9116 3.02153L3.24165 2.99309L4.25688 1.1541ZM9.61304 7.65222C9.61304 9.32456 8.67234 10.2653 7 10.2653C5.32766 10.2653 4.38696 9.32456 4.38696 7.65222C4.38696 5.97988 5.32766 5.03918 7 5.03918C8.67234 5.03918 9.61304 5.97988 9.61304 7.65222Z" fill="#FF4500" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_63_101">
+                        <rect width="14" height="14" fill="white" />
+                      </clipPath>
+                    </defs>
                   </svg>
                   <p className="text-black font-semibold text-lg">{gallery.tabname}</p>
                 </div>
 
-                <Image src="/belowBorder.png" alt="Border" className="mx-auto my-3" width={200} height={15} loading="lazy" />
+                <Image src="/belowBorder.png" alt="Border" className="mx-auto mt-3 mb-5" width={200} height={15} loading="lazy" />
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {gallery?.items?.length > 0 ? (
-                    gallery.items.map((item: any, index: number) => {
-                      // absolute or relative?
-                      const imageUrl = item.image;
-                      return (
-                        <div key={index} className="text-center">
-                          <img
-                            src={imageUrl}
-                            alt={item.newstitle || "Gallery image"}
-                            className="rounded-xl shadow-md w-full h-48 object-cover"
-                          />
-                          <p className="text-sm mt-1">{item.newstitle}</p>
-                        </div>
-                      );
-                    })
+                    // 🛠️ FIX 3A: Map over the outer array
+                    gallery.items.map((innerArray: any, index: number) => (
+                      // 🛠️ FIX 3A: Map over the inner array (Array of Objects)
+                      innerArray.map((item: any, innerIndex: number) => {
+                        const imageUrl = item.image;
+                        return (
+                          <div key={`${index}-${innerIndex}`} className="text-center">
+                            <img
+                              src={imageUrl}
+                              alt={item.newstitle || "Gallery image"}
+                              className="rounded-xl shadow-md w-full h-48 object-cover"
+                            />
+                            <p className="text-base font-semibold mt-2">{item.newstitle}</p>
+                          </div>
+                        );
+                      })
+                    ))
                   ) : (
                     <p>📷 படங்கள் இல்லை</p>
                   )}
@@ -594,29 +603,66 @@ export default function TemplePage() {
 
             )}
 
+            {/* 🧭 அருகில் உள்ள கோயில் (Temples Tab) - CORRECTED */}
+            {activeTab === 'அருகில் உள்ள கோயில்' && temples && (
+              <div>
+                <div className="flex items-center justify-center gap-1 mb-2">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.9717 2.96478C16.2745 2.85745 16.612 2.9337 16.8392 3.16091C17.0663 3.38812 17.1427 3.72561 17.0353 4.02843L12.5017 16.8051C12.3537 17.2217 11.9597 17.5001 11.5177 17.5001C11.0837 17.5001 10.6948 17.2314 10.5412 16.8255L8.65317 11.832C8.56858 11.6083 8.39175 11.4315 8.16813 11.3469L3.17464 9.45892C2.81942 9.3245 2.5692 9.01 2.51221 8.64267L2.5 8.48233L2.50326 8.40017C2.53533 7.99207 2.80443 7.63711 3.19498 7.49848L15.9717 2.96478Z" fill="#FF4500" />
+                  </svg>
+                  {/* 🛠️ FIX: Use 'temples.tabname' instead of 'nearestTemples.tabname' */}
+                  <p className="text-black font-semibold text-lg">{temples.tabname || 'அருகிலுள்ள கோயில்'}</p>
+                </div>
 
-            {/* அருகிலுள்ள கோயில் */}
-            {activeTab === 'அருகிலுள்ள கோயில்' && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {temples?.length
-                  ? temples.map((temple: any, i: number) =>
-                    temple.map((t: any, j: number) => (
+                <Image src="/belowBorder.png" alt="Border" className="mx-auto mt-3 mb-5" width={200} height={15} loading="lazy" />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+                  {/* The rest of the loop logic is correct for rendering */}
+                  {temples?.nearest_temples?.length > 0
+                    ? temples.nearest_temples.slice(0, 10).map((t: any, i: number) => (
                       <div
-                        key={`${i}-${j}`}
-                        className="border p-3 rounded-xl hover:shadow-lg transition"
+                        key={i}
+                        className="border border-black/20 rounded-md"
                       >
-                        <img
-                          src={t.image}
-                          alt={t.newstitle}
-                          className="rounded-lg w-full h-40 object-cover"
-                        />
-                        <h4 className="text-red-700 font-semibold mt-2">
-                          {t.newstitle}
-                        </h4>
+
+                        <div className="relative group">
+
+                          <img
+                            src={t.image}
+                            alt={t.newstitle}
+                            className="rounded-lg w-full h-40 object-cover"
+                          />
+                          <div className="bg-[#007AFF] text-white px-3 py-1 absolute bottom-3 group-hover:bottom-6 transition-[400ms] left-3 flex items-center gap-2 rounded-full">
+                            <div className="w-2 h-2 border border-white rounded-full"></div>
+                            <p className="text-[10px] font-semibold">{t.tirupidam}</p>
+                          </div>
+                        </div>
+
+                        <div className="p-3">
+                          <h4 className="text-black hover:text-[#ff4500] font-semibold mb-2">
+                            அருள்மிகு {t.newstitle} திருக்கோயில்
+                          </h4>
+
+                          <div className="flex items-center gap-2">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_60_91)">
+                                <path d="M15.47 7.83C14.882 6.30882 13.861 4.99331 12.5334 4.04604C11.2058 3.09878 9.62977 2.56129 8.00003 2.5C6.37029 2.56129 4.79423 3.09878 3.46663 4.04604C2.13904 4.99331 1.11811 6.30882 0.530031 7.83C0.490315 7.93985 0.490315 8.06015 0.530031 8.17C1.11811 9.69118 2.13904 11.0067 3.46663 11.954C4.79423 12.9012 6.37029 13.4387 8.00003 13.5C9.62977 13.4387 11.2058 12.9012 12.5334 11.954C13.861 11.0067 14.882 9.69118 15.47 8.17C15.5097 8.06015 15.5097 7.93985 15.47 7.83ZM8.00003 12.5C5.35003 12.5 2.55003 10.535 1.53503 8C2.55003 5.465 5.35003 3.5 8.00003 3.5C10.65 3.5 13.45 5.465 14.465 8C13.45 10.535 10.65 12.5 8.00003 12.5Z" fill="#889097" />
+                                <path d="M8 5C7.40666 5 6.82664 5.17595 6.33329 5.50559C5.83994 5.83524 5.45543 6.30377 5.22836 6.85195C5.0013 7.40013 4.94189 8.00333 5.05765 8.58527C5.1734 9.16721 5.45912 9.70176 5.87868 10.1213C6.29824 10.5409 6.83279 10.8266 7.41473 10.9424C7.99667 11.0581 8.59987 10.9987 9.14805 10.7716C9.69623 10.5446 10.1648 10.1601 10.4944 9.66671C10.8241 9.17336 11 8.59334 11 8C11 7.20435 10.6839 6.44129 10.1213 5.87868C9.55871 5.31607 8.79565 5 8 5ZM8 10C7.60444 10 7.21776 9.8827 6.88886 9.66294C6.55996 9.44318 6.30362 9.13082 6.15224 8.76537C6.00087 8.39991 5.96126 7.99778 6.03843 7.60982C6.1156 7.22186 6.30608 6.86549 6.58579 6.58579C6.86549 6.30608 7.22186 6.1156 7.60982 6.03843C7.99778 5.96126 8.39992 6.00087 8.76537 6.15224C9.13082 6.30362 9.44318 6.55996 9.66294 6.88886C9.8827 7.21776 10 7.60444 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10Z" fill="#889097" />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_60_91">
+                                  <rect width="16" height="16" fill="white" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+
+                            <p className="text-xs text-[#889097]">159k Views</p>
+                          </div>
+                        </div>
                       </div>
                     ))
-                  )
-                  : <p>அருகிலுள்ள கோயில் தகவல் இல்லை</p>}
+                    : <p>அருகிலுள்ள கோயில் தகவல் இல்லை</p>}
+                </div>
               </div>
             )}
 
@@ -659,13 +705,112 @@ export default function TemplePage() {
                   விரதம்; விநாயகர், முருகனை வழிபட நல்லதே நடக்கும்!</p>
               </a>
 
-              <div className="mt-3">
+              <div className="flex items-center gap-3 mt-3">
                 <p className="text-[#889097] text-xs">26 செப் 2024</p>
+
+                <div className="flex items-center gap-1">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_91)">
+                      <path d="M15.47 7.83C14.882 6.30882 13.861 4.99331 12.5334 4.04604C11.2058 3.09878 9.62977 2.56129 8.00003 2.5C6.37029 2.56129 4.79423 3.09878 3.46663 4.04604C2.13904 4.99331 1.11811 6.30882 0.530031 7.83C0.490315 7.93985 0.490315 8.06015 0.530031 8.17C1.11811 9.69118 2.13904 11.0067 3.46663 11.954C4.79423 12.9012 6.37029 13.4387 8.00003 13.5C9.62977 13.4387 11.2058 12.9012 12.5334 11.954C13.861 11.0067 14.882 9.69118 15.47 8.17C15.5097 8.06015 15.5097 7.93985 15.47 7.83ZM8.00003 12.5C5.35003 12.5 2.55003 10.535 1.53503 8C2.55003 5.465 5.35003 3.5 8.00003 3.5C10.65 3.5 13.45 5.465 14.465 8C13.45 10.535 10.65 12.5 8.00003 12.5Z" fill="#889097" />
+                      <path d="M8 5C7.40666 5 6.82664 5.17595 6.33329 5.50559C5.83994 5.83524 5.45543 6.30377 5.22836 6.85195C5.0013 7.40013 4.94189 8.00333 5.05765 8.58527C5.1734 9.16721 5.45912 9.70176 5.87868 10.1213C6.29824 10.5409 6.83279 10.8266 7.41473 10.9424C7.99667 11.0581 8.59987 10.9987 9.14805 10.7716C9.69623 10.5446 10.1648 10.1601 10.4944 9.66671C10.8241 9.17336 11 8.59334 11 8C11 7.20435 10.6839 6.44129 10.1213 5.87868C9.55871 5.31607 8.79565 5 8 5ZM8 10C7.60444 10 7.21776 9.8827 6.88886 9.66294C6.55996 9.44318 6.30362 9.13082 6.15224 8.76537C6.00087 8.39991 5.96126 7.99778 6.03843 7.60982C6.1156 7.22186 6.30608 6.86549 6.58579 6.58579C6.86549 6.30608 7.22186 6.1156 7.60982 6.03843C7.99778 5.96126 8.39992 6.00087 8.76537 6.15224C9.13082 6.30362 9.44318 6.55996 9.66294 6.88886C9.8827 7.21776 10 7.60444 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10Z" fill="#889097" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_60_91">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+
+                  <p className="text-xs text-[#889097]">159k Views</p>
+                </div>
               </div>
 
             </div>
 
+            <div className="my-7">
+
+              <a href="#">
+                <img src="https://imgtemple.dinamalar.com/kovilimages/news/LRG_20251010150655660178.jpg" alt="News 1" className="rounded-md" />
+
+                <p className="font-semibold text-base hover:text-[#ff4500] mt-3">திருமலைகேணியில் புரட்டாசி கார்த்திகை
+                  விழா; முருகபெருமானுக்கு சிறப்பு அபிஷேகம்</p>
+              </a>
+
+              <div className="flex items-center gap-3 mt-3">
+                <p className="text-[#889097] text-xs">26 செப் 2024</p>
+
+                <div className="flex items-center gap-1">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_91)">
+                      <path d="M15.47 7.83C14.882 6.30882 13.861 4.99331 12.5334 4.04604C11.2058 3.09878 9.62977 2.56129 8.00003 2.5C6.37029 2.56129 4.79423 3.09878 3.46663 4.04604C2.13904 4.99331 1.11811 6.30882 0.530031 7.83C0.490315 7.93985 0.490315 8.06015 0.530031 8.17C1.11811 9.69118 2.13904 11.0067 3.46663 11.954C4.79423 12.9012 6.37029 13.4387 8.00003 13.5C9.62977 13.4387 11.2058 12.9012 12.5334 11.954C13.861 11.0067 14.882 9.69118 15.47 8.17C15.5097 8.06015 15.5097 7.93985 15.47 7.83ZM8.00003 12.5C5.35003 12.5 2.55003 10.535 1.53503 8C2.55003 5.465 5.35003 3.5 8.00003 3.5C10.65 3.5 13.45 5.465 14.465 8C13.45 10.535 10.65 12.5 8.00003 12.5Z" fill="#889097" />
+                      <path d="M8 5C7.40666 5 6.82664 5.17595 6.33329 5.50559C5.83994 5.83524 5.45543 6.30377 5.22836 6.85195C5.0013 7.40013 4.94189 8.00333 5.05765 8.58527C5.1734 9.16721 5.45912 9.70176 5.87868 10.1213C6.29824 10.5409 6.83279 10.8266 7.41473 10.9424C7.99667 11.0581 8.59987 10.9987 9.14805 10.7716C9.69623 10.5446 10.1648 10.1601 10.4944 9.66671C10.8241 9.17336 11 8.59334 11 8C11 7.20435 10.6839 6.44129 10.1213 5.87868C9.55871 5.31607 8.79565 5 8 5ZM8 10C7.60444 10 7.21776 9.8827 6.88886 9.66294C6.55996 9.44318 6.30362 9.13082 6.15224 8.76537C6.00087 8.39991 5.96126 7.99778 6.03843 7.60982C6.1156 7.22186 6.30608 6.86549 6.58579 6.58579C6.86549 6.30608 7.22186 6.1156 7.60982 6.03843C7.99778 5.96126 8.39992 6.00087 8.76537 6.15224C9.13082 6.30362 9.44318 6.55996 9.66294 6.88886C9.8827 7.21776 10 7.60444 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10Z" fill="#889097" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_60_91">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+
+                  <p className="text-xs text-[#889097]">9k Views</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div>
+
+              <a href="#">
+                <img src="https://imgtemple.dinamalar.com/kovilimages/news/LRG_20251010115057083475.jpg" alt="News 1" className="rounded-md" />
+
+                <p className="font-semibold text-base hover:text-[#ff4500] mt-3">வாராகி அம்மன் கோவிலில் நெய்யில் தெரிந்த
+                  அம்மன் உருவம்; பக்தர்கள் பரவசம்</p>
+              </a>
+
+              <div className="flex items-center gap-3 mt-3">
+                <p className="text-[#889097] text-xs">26 செப் 2024</p>
+
+                <div className="flex items-center gap-1">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_91)">
+                      <path d="M15.47 7.83C14.882 6.30882 13.861 4.99331 12.5334 4.04604C11.2058 3.09878 9.62977 2.56129 8.00003 2.5C6.37029 2.56129 4.79423 3.09878 3.46663 4.04604C2.13904 4.99331 1.11811 6.30882 0.530031 7.83C0.490315 7.93985 0.490315 8.06015 0.530031 8.17C1.11811 9.69118 2.13904 11.0067 3.46663 11.954C4.79423 12.9012 6.37029 13.4387 8.00003 13.5C9.62977 13.4387 11.2058 12.9012 12.5334 11.954C13.861 11.0067 14.882 9.69118 15.47 8.17C15.5097 8.06015 15.5097 7.93985 15.47 7.83ZM8.00003 12.5C5.35003 12.5 2.55003 10.535 1.53503 8C2.55003 5.465 5.35003 3.5 8.00003 3.5C10.65 3.5 13.45 5.465 14.465 8C13.45 10.535 10.65 12.5 8.00003 12.5Z" fill="#889097" />
+                      <path d="M8 5C7.40666 5 6.82664 5.17595 6.33329 5.50559C5.83994 5.83524 5.45543 6.30377 5.22836 6.85195C5.0013 7.40013 4.94189 8.00333 5.05765 8.58527C5.1734 9.16721 5.45912 9.70176 5.87868 10.1213C6.29824 10.5409 6.83279 10.8266 7.41473 10.9424C7.99667 11.0581 8.59987 10.9987 9.14805 10.7716C9.69623 10.5446 10.1648 10.1601 10.4944 9.66671C10.8241 9.17336 11 8.59334 11 8C11 7.20435 10.6839 6.44129 10.1213 5.87868C9.55871 5.31607 8.79565 5 8 5ZM8 10C7.60444 10 7.21776 9.8827 6.88886 9.66294C6.55996 9.44318 6.30362 9.13082 6.15224 8.76537C6.00087 8.39991 5.96126 7.99778 6.03843 7.60982C6.1156 7.22186 6.30608 6.86549 6.58579 6.58579C6.86549 6.30608 7.22186 6.1156 7.60982 6.03843C7.99778 5.96126 8.39992 6.00087 8.76537 6.15224C9.13082 6.30362 9.44318 6.55996 9.66294 6.88886C9.8827 7.21776 10 7.60444 10 8C10 8.53043 9.78929 9.03914 9.41421 9.41421C9.03914 9.78929 8.53043 10 8 10Z" fill="#889097" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_60_91">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+
+                  <p className="text-xs text-[#889097]">19k Views</p>
+                </div>
+              </div>
+
+            </div>
+
+            <button className="group px-3 py-2 bg-[#ff4500] hover:bg-white hover:border hover:border-[#ff4500] mt-5 rounded-md flex items-center gap-2 mx-auto cursor-pointer">
+
+              <p className="text-sm font-semibold text-white group-hover:text-[#ff4500]">மேலும் இன்றைய செய்திகள்</p>
+
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_61_95)">
+                  <path className="fill-white group-hover:fill-[#ff4500]" d="M15.5119 8.79105C15.9494 8.35353 15.9494 7.64299 15.5119 7.20547L9.91158 1.60515C9.47406 1.16763 8.76352 1.16763 8.32599 1.60515C7.88847 2.04268 7.88847 2.75322 8.32599 3.19074L12.0187 6.87994H1.2801C0.660563 6.87994 0.160034 7.38047 0.160034 8.00001C0.160034 8.61954 0.660563 9.12007 1.2801 9.12007H12.0152L8.32949 12.8093C7.89197 13.2468 7.89197 13.9573 8.32949 14.3949C8.76702 14.8324 9.47756 14.8324 9.91508 14.3949L15.5154 8.79455L15.5119 8.79105Z" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_61_95">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </button>
+
           </div>
+
+          <a href="#" className="my-7 block">
+            <img src="https://or-temple-st.dinamalar.com/new2024/templef/images/addtemple1.png" alt="Advertisement" />
+          </a>
 
         </div>
 
